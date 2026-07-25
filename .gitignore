@@ -1,0 +1,101 @@
+# ==============================
+# Dependencies
+# ==============================
+node_modules/
+
+# ==============================
+# Environment Variables
+# ==============================
+.env
+.env.*
+!.env.example
+
+client/.env
+server/.env
+
+# ==============================
+# Logs
+# ==============================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==============================
+# Build Output
+# ==============================
+dist/
+build/
+coverage/
+
+# ==============================
+# Cache
+# ==============================
+.cache/
+.parcel-cache/
+.npm/
+.eslintcache
+.vite/
+.nyc_output/
+
+# ==============================
+# Runtime Files
+# ==============================
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# ==============================
+# Operating System Files
+# ==============================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ==============================
+# VS Code
+# ==============================
+.vscode/
+.vscode-test/
+
+# ==============================
+# IntelliJ / WebStorm
+# ==============================
+.idea/
+
+# ==============================
+# Yarn
+# ==============================
+.yarn/
+.pnp.*
+.yarn-integrity
+
+# ==============================
+# TypeScript
+# ==============================
+*.tsbuildinfo
+
+# ==============================
+# Temporary Files
+# ==============================
+*.tmp
+*.temp
+
+# ==============================
+# Miscellaneous
+# ==============================
+*.tgz
+report.*.json
+
+# ==============================
+# Screenshots (keep folder only)
+# ==============================
+screenshots/*.png
+screenshots/*.jpg
+screenshots/*.jpeg
+
+# Uncomment if you want to keep the folder in Git
+#!screenshots/.gitkeep
