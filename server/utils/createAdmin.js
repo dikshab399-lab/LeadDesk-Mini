@@ -11,33 +11,28 @@ connectDB();
 
 const createAdmin = async () => {
   try {
-    const email = "admin@leaddesk.com";
-    const password = "Admin@123";
+    const email = process.env.ADMIN_EMAIL;
+    const password = process.env.ADMIN_PASSWORD;
 
-    // Check if admin already exists
+    if (!email || !password) {
+      process.exit(1);
+    }
+
     const existingAdmin = await Admin.findOne({ email });
 
     if (existingAdmin) {
-      console.log("✅ Admin already exists");
       process.exit();
     }
 
-    // Hash password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Create admin
     await Admin.create({
       email,
       password: hashedPassword,
     });
 
-    console.log("✅ Admin created successfully!");
-    console.log("Email:", email);
-    console.log("Password:", password);
-
     process.exit();
   } catch (error) {
-    console.error(error);
     process.exit(1);
   }
 };
